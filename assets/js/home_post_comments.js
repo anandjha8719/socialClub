@@ -1,9 +1,4 @@
-// Let's implement this via classes
-
-// this class would be initialized for every post on the page
-// 1. When the page loads
-// 2. Creation of every post dynamically via AJAX
-
+//implementation via classes
 class PostComments{
     // constructor is used to initialize the instance of the class whenever a new instance is created
     constructor(postId){
@@ -35,6 +30,8 @@ class PostComments{
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     $(`#post-comments-${postId}`).prepend(newComment);
                     pSelf.deleteComment($(' .delete-comment-button', newComment));
+
+                    new ToggleLike($('.toggle-like-button', newComment))
 
                     new Noty({
                         theme: 'relax',
@@ -69,6 +66,13 @@ class PostComments{
                             <small>
                                 ${comment.user.name}
                             </small>
+
+                            <small>
+                                <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${comment._id}&type=Comment">
+                                    0 Likes
+                                </a>
+                            </small>
+
                         </p>    
 
                 </li>`);
