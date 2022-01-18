@@ -1,3 +1,4 @@
+//class to toggle likes when a link is clicked, using AJAX
 class ToggleLike{
     constructor(toggleElement){
         this.toggler = toggleElement;
@@ -10,7 +11,6 @@ class ToggleLike{
             e.preventDefault();
             let self = this;
 
-            // new way of writing ajax
             $.ajax({
                 type: 'POST',
                 url: $(self).attr('href'),

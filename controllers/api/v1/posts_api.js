@@ -1,6 +1,5 @@
 const Post = require('../../../models/post');
 const Comment = require('../../../models/comment');
-
 module.exports.index = async function(req, res){
 
 
@@ -18,7 +17,8 @@ module.exports.index = async function(req, res){
         message: "List of posts",
         posts: posts
     })
-};
+}
+
 
 module.exports.destroy = async function(req, res){
 
@@ -31,20 +31,20 @@ module.exports.destroy = async function(req, res){
             await Comment.deleteMany({post: req.params.id});
 
 
-
+    
             return res.json(200, {
-                message: "Posts and associated comments deleted successfully"
+                message: "Post and associated comments deleted successfully!"
             });
         }else{
             return res.json(401, {
-                message: "you can not delete this post!"
-            })
+                message: "You cannot delete this post!"
+            });
         }
 
     }catch(err){
-        console.log("*****ERROR******", err)
+        console.log('********', err);
         return res.json(500, {
-            message: "internal Server error"
+            message: "Internal Server Error"
         });
     }
     

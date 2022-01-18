@@ -5,13 +5,13 @@ const likeSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.ObjectId
     },
-    //this defines the boject id of the liked object
+    // this defines the object id of the liked object
     likeable: {
         type: mongoose.Schema.ObjectId,
-        required: true,
+        require: true,
         refPath: 'onModel'
     },
-    //this field is used for defining the type of the liked object since this is a dynamic reference
+    // this field is used for defining the type of the liked object since this is a dynamic reference
     onModel: {
         type: String,
         required: true,

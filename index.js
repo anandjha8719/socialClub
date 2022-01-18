@@ -16,11 +16,11 @@ const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
-//chat server setup
+// setup the chat server to be used with socket.io
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 chatServer.listen(5000);
-console.log('chat server is listening on port 5000')
+console.log('chat server is listening on port 5000');
 
 
 app.use(sassMiddleware({
@@ -35,8 +35,7 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static('./assets'));
-
-//making uploads path available to brouser
+// make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 app.use(expressLayouts);
@@ -53,7 +52,7 @@ app.set('views', './views');
 
 // mongo store is used to store the session cookie in the db
 app.use(session({
-    name: 'codeial',
+    name: 'socialclub',
     // TODO change the secret before deployment in production mode
     secret: 'blahsomething',
     saveUninitialized: false,

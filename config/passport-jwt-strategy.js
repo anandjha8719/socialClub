@@ -4,29 +4,25 @@ const ExtractJWT = require('passport-jwt').ExtractJwt;
 
 const User = require('../models/user');
 
+
 let opts = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: 'socialclub'
 }
-//same thing as above :
-// let opts = {};
-// opts.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
-// opts.secretOrKey = 'socialclub';
+
 
 passport.use(new JWTStrategy(opts, function(jwtPayLoad, done){
 
     User.findById(jwtPayLoad._id, function(err, user){
-        if(err){
-            console.log('Error in finding user from JWT'); return;
-        }
+        if (err){console.log('Error in finding user from JWT'); return;}
 
-        if(user){
+        if (user){
             return done(null, user);
-        } else {
+        }else{
             return done(null, false);
         }
     })
 
-}))
+}));
 
 module.exports = passport;
