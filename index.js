@@ -67,7 +67,6 @@ app.set('views', './views');
 // mongo store is used to store the session cookie in the db
 app.use(session({
     name: 'socialclub',
-    // TODO change the secret before deployment in production mode
     secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,

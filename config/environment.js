@@ -23,7 +23,7 @@ const development = {
     name: 'development',
     asset_path: process.env.SC_ASSET_PATH,
     session_cookie_key: 'blahsomething',
-    db: 'dev_socialclub',
+    db: 'mongodb://localhost/dev_socialclub',
     smtp: {
         service: 'gmail',
         host: 'smtp.gmail.com',
