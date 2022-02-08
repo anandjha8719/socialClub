@@ -1,9 +1,11 @@
 #layout-header{
     nav{
+        margin-bottom: 0;
         display: flex;
         justify-content: space-between;
         padding: 4px 14px;
-        background: #0faf97;
+        background: #033F63;
+        border: none;
         color: white;
         box-shadow: 1px 1px 1px 1px lightgrey;
 
@@ -12,6 +14,9 @@
                 margin: 5px;
                 font-size: 1.4rem;
                 font-weight: bold;
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                }
             }
         }
 
@@ -22,6 +27,7 @@
                 list-style: none;
                 li{
                     margin-right: 10px;
+                    font-family: 'Montserrat', sans-serif;
                 }
             }
         }

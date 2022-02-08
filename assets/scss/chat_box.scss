@@ -1,15 +1,15 @@
 
 #user-chat-box{
+	background-image: linear-gradient(to right,  rgb(238, 248, 238), rgb(187, 187, 187));
     position: fixed;
     bottom: 2px;
     right: 16px;
     border: 1px dashed grey;
     height: 360px;
 	width: 300px;
-	background: white;
 	padding: 0;
 	box-shadow: 1px 1px 1px 1px lightgrey;
-	border: 2px solid #0faf97;
+	border: 1.5px solid #4b4e4f;
 	border-radius: 4px;
 
     #chat-messages-list{
@@ -17,16 +17,17 @@
 		margin: 0;
 	    padding: 0;
 	    height: 84%;
-	    background-color: white;
+	    background-image: linear-gradient(to right, rgb(238, 248, 238), rgb(187, 187, 187));
 	    overflow: auto;
 
 	    .other-message{
 		    text-align: left;
 		    padding: 0px;
 		    span{
+				color: white;
 		    	display: inline-block;
 	    		padding: 8px;
-		    	background-color: #ffa0a0;
+		    	background-color: rgb(76, 76, 76);
 		    }
 		    
 	    }
@@ -36,10 +37,10 @@
 		    padding: 0;
 		   
 		    span{
-		    	 
+		    	color: white;
 	    		display: inline-block;
 	    		padding: 8px;
-    			background-color: #a0dcff;
+    			background-color: #044814;
 		    }
 		   
 	    }
@@ -62,7 +63,11 @@
 			    font-size: 25px;
 			    color: white;
 			    border: none;
-			    background: #0faf97;
+			    background: #033F63;
+				&:hover {
+					background-color: #57819d;
+					cursor: pointer;
+				}
 		    }
 	    }
 }

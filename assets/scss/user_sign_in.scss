@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #bcffcb, rgb(201, 201, 201));
+}
+
+#container {
+    display: flex;
+    // border: 2px solid rgb(108, 111, 111);
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    margin: 20px auto;
+    h1 {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        padding-bottom: 4px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 140px;
+        padding: 8px;
+        justify-content: space-between;
+
+        #email {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 16px;
+            color: #85b6ff;
+            padding: 20px 10px 20px 5px;
+            border: 2px solid #033F63;
+            width: 320px;
+            height: 45px;
+            margin: 15px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            text-align: center;
+            overflow: hidden;
+            font-family: sans-serif;
+            align-self: center;
+        }
+
+        #password {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 16px;
+            color: #85b6ff;
+            padding: 20px 10px 20px 5px;
+            border: 2px solid #033F63;
+            width: 320px;
+            height: 45px;
+            margin: 15px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            text-align: center;
+            overflow: hidden;
+            font-family: sans-serif;
+            align-self: center;
+
+        }
+
+        #submit {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            width: 260px;
+            height: 45px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            cursor: pointer;
+            color: #ffffff;
+            border: none;
+            background: #033F63;
+            border-radius: 25px;
+            align-self: center;
+            &:hover {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+                border: 1px solid #033f63;
+            }
+        }
+
+    }
+    p {
+        margin-top: 50px;
+
+        #google-sign-in {
+            color: rgb(20, 122, 211);
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            &:hover{
+                color: rgb(0, 157, 255);
+            }
+        }
+    }
+   
+}
+
