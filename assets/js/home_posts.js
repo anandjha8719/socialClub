@@ -21,7 +21,7 @@
                     new ToggleLike($(' .toggle-like-button', newPost));
 
                     new Noty({
-                        theme: 'relax',
+                        theme: 'semanticui',
                         text: "Post published!",
                         type: 'success',
                         layout: 'topRight',
@@ -43,7 +43,7 @@
                     <p>
                         
                         <small>
-                            <a class="delete-post-button"  href="/posts/destroy/${ post._id }">X</a>
+                            <a class="delete-post-button"  href="/posts/destroy/${ post._id }">Delete Post</a>
                         </small>
                        
                         ${ post.content }
@@ -92,7 +92,7 @@
                 success: function(data){
                     $(`#post-${data.data.post_id}`).remove();
                     new Noty({
-                        theme: 'relax',
+                        theme: 'semanticui',
                         text: "Post Deleted",
                         type: 'success',
                         layout: 'topRight',

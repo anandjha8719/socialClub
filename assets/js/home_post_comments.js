@@ -38,7 +38,7 @@ class PostComments{
 
                     new ToggleLike($(' .toggle-like-button', newComment));
                     new Noty({
-                        theme: 'relax',
+                        theme: 'semanticui',
                         text: "Comment published!",
                         type: 'success',
                         layout: 'topRight',
@@ -62,7 +62,7 @@ class PostComments{
                         <p>
                             
                             <small>
-                                <a class="delete-comment-button" href="/comments/destroy/${comment._id}">X</a>
+                                <a class="delete-comment-button" href="/comments/destroy/${comment._id}">Delete comment</a>
                             </small>
                             
                             ${comment.content}
@@ -95,7 +95,7 @@ class PostComments{
                     $(`#comment-${data.data.comment_id}`).remove();
 
                     new Noty({
-                        theme: 'relax',
+                        theme: 'semanticui',
                         text: "Comment Deleted",
                         type: 'success',
                         layout: 'topRight',
